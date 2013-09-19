@@ -1,0 +1,11 @@
+<div class="hero-unit">
+  <h1>AngularJS Commits</h1>
+  <p>... glad you asked, heres the latest angularJS commits</p>
+  <ul>
+    <li ng-repeat="commit in commits">
+      {{ commit.commit.committer.date | date }}
+      <a ng-href="https://github.com/angular/angular.js/commit/{{commit.sha}}">{{ commit.sha }}</a>
+      {{ commit.commit.message }}
+    </li>
+  </ul>
+</div>
